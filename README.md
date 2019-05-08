@@ -25,8 +25,8 @@ utils---------工具函数
 
 ### 项目截图
 
-![登录页面](docs/screeshot/login.png)
-![列表页面](docs/screeshot/groups.png)
+![登录页面](https://github.com/pibigstar/admin-todo/blob/master/docs/screenshot/login.png)
+![列表页面](https://github.com/pibigstar/admin-todo/blob/master/docs/screenshot/groups.png)
 
 
 
