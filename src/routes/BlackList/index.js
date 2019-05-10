@@ -219,7 +219,7 @@ class BlackList extends React.Component {
 
     return (
       <div>
-        <Card bordered={false} title='用户管理' style={{marginBottom: 10, minHeight: 440}} id='editTable'>
+        <Card bordered={false} title='黑名单管理' style={{marginBottom: 10, minHeight: 440}} id='editTable'>
           <Table rowKey={record => record.ID}
                  components={components} 
                  bordered 
