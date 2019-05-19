@@ -2,7 +2,7 @@ import React from 'react'
 import { randomNum, calculateWidth } from '../../utils/utils'
 import { withRouter } from 'react-router-dom'
 import { inject, observer } from 'mobx-react/index'
-import { Form, Input, Row, Col } from 'antd'
+import { Form,message, Input, Row, Col } from 'antd'
 import PromptBox from '../../components/PromptBox'
 import axios from 'axios'
 
@@ -79,10 +79,14 @@ class LoginForm extends React.Component {
           url: domain+'login',
           data: param
         }).then(res => {
-          this.props.appStore.toggleLogin(true, {username: values.username})
-
-          const {from} = this.props.location.state || {from: {pathname: '/'}}
-          this.props.history.push(from)
+          console.log(res.data)
+          if(res.data.Code===200){
+            this.props.appStore.toggleLogin(true, {username: values.username})
+            const {from} = this.props.location.state || {from: {pathname: '/'}}
+            this.props.history.push(from)
+          }else {
+            message.error('账号或密码错误');
+          }
         })
       }
     })

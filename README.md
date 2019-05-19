@@ -28,7 +28,12 @@ utils---------工具函数
 ![登录页面](https://github.com/pibigstar/admin-todo/blob/master/docs/screenshot/login.png)
 ![列表页面](https://github.com/pibigstar/admin-todo/blob/master/docs/screenshot/groups.png)
 
+### 启动
 
+```bash
+npm run start
+
+```
 
 ### 快速开发
 
