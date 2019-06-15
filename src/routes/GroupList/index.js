@@ -29,7 +29,7 @@ class GroupList extends React.Component {
         title: '组织ID',
         dataIndex: 'ID',
         sorter: true,
-        width: '5%',
+        width: '10%',
         editable: true,
       },
     {
@@ -169,6 +169,14 @@ class GroupList extends React.Component {
     const arr = this.state.data.slice()
     this.setState({
       data: arr.filter(item => item.ID !== ID)
+    })
+    const domain = this.props.appStore.domain
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+    axios({
+      method: 'post',
+      data: {"id":ID},
+      url: domain+'group/delete',
+    }).then(res => {
     })
   }
 

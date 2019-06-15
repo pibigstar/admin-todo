@@ -140,6 +140,14 @@ class UserList extends React.Component {
     this.setState({
       data: arr.filter(item => item.ID !== ID)
     })
+    const domain = this.props.appStore.domain
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+    axios({
+      method: 'post',
+      data: {"id":ID},
+      url: domain+'user/delete',
+    }).then(res => {
+    })
   }
 
   // 添加
